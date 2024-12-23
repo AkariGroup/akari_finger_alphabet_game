@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import game_main
 import argparse
 import cv2
@@ -54,7 +53,6 @@ def main() -> None:
     i=0
 
     # AKARIのSDカード上に保存されている練習用画像のパス
-    
     images = ["/jpg/handA.jpg","/jpg/handI.jpg","/jpg/handU.jpg","/jpg/handE.jpg","/jpg/handO.jpg"]
 
     while not end:
@@ -122,7 +120,7 @@ def main() -> None:
                     num_e = 0
                     num_o = 0
             
-                oakd_yolo.display_frame("nn", frame, detections)
+                oakd_yolo.display_frame("AKARI_PRACTICE", frame, detections)
 
 
             if cv2.waitKey(1) == ord("q"):

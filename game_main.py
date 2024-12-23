@@ -64,7 +64,7 @@ def main() -> None:
     num_o = 0
 
     # 問題文になる単語群
-    words = ["クリスマス","こんにちは","ありがとう","山本貴史","桜","おにぎり","おぼろ月","江戸前","海岸","戦績","伝説の剣聖","洗礼","トウモロコシ","微笑み","誇り",
+    words = ["クリスマス","こんにちは","ありがとう","桜","おにぎり","おぼろ月","江戸前","海岸","戦績","伝説の剣聖","洗礼","トウモロコシ","微笑み","誇り",
              "ふるさと","宇宙船","トヨタ自動車","風景画","不正アクセス","長期的視野","六波羅探題","亜細亜"]
     # 母音の数を格納するリスト
     numbers = {'あ':0,'い':0,'う':0,'え':0,'お':0}
@@ -159,12 +159,6 @@ def main() -> None:
                                 engine.runAndWait()
                                 display = 0
 
-
-                            # # デバック用
-                            # print(word)
-                            # print("max="+maxis+"myhand="+message)
-                            # print(numbers)
-
                             previous_message = message  # 現在のメッセージを前回のメッセージとして更新
                 else:
                     # 指が認識されていない場合、previous_messageを初期化
@@ -176,7 +170,7 @@ def main() -> None:
                     num_e = 0
                     num_o = 0
             
-                oakd_yolo.display_frame("nn", frame, detections)
+                oakd_yolo.display_frame("AKARI_MAIN", frame, detections)
 
             
 
