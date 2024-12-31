@@ -2,11 +2,13 @@
 # akari_finger_alphabet_game
 
 ## セットアップ方法
-1. ローカルにクローンする  
+1. 指文字画像をSDカードへコピー  
+   `finger_alphabet_images`に入っている指文字の各画像をAkari内のSDカードの`jpg/`にコピーする
+2. ローカルにクローンする  
    `cd ~`  
    `git clone https://github.com/AkariGroup/akari_finger_alphabet_game.git`  
    `cd akari_finger_alphabet_game`  
-2. 仮想環境の作成  
+3. 仮想環境の作成  
    `python3 -m venv venv`  
    `. venv/bin/activate`  
    `pip install -r requirements.txt`  
