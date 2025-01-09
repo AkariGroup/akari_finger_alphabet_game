@@ -15,7 +15,8 @@
 ## 起動方法  
 1. 仮想環境の有効化  
    `.venv/bin/activate`  
-2. `python3 game_practice.py -m model/best_openvino_2022.1_6shave.blob -c json/best.json`を実行すると、`game_practice.py`が開始する  
+2. `python3 game_practice.py`を実行すると、`game_practice.py`が開始する  
+   練習モードをスキップする場合は、`python3 game_main.py`を実行し、手順6へ  
 3. Akariの画面に表示されている指文字を真似して、指文字を練習する  
 4. 正しく指文字が表せたら、次の指文字が表示される  
 5. 「あいうえお」全ての練習が終わると、`game_main.py`が開始する  
