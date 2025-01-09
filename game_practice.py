@@ -13,14 +13,14 @@ def main() -> None:
         "-m",
         "--model",
         help="Provide model name or model path for inference",
-        default="yolov7tiny_coco_416x416",
+        default="model/best_openvino_2022.1_6shave.blob",
         type=str,
     )
     parser.add_argument(
         "-c",
         "--config",
         help="Provide config path for inference",
-        default="json/yolov7tiny_coco_416x416.json",
+        default="json/best.json",
         type=str,
     )
     parser.add_argument(
