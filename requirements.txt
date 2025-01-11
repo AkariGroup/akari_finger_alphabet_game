@@ -1,0 +1,6 @@
+akari-client[depthai]
+akari-proto
+tdqm
+opencv-python
+pyttsx3
+pykakasi
