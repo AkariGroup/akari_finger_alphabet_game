@@ -77,11 +77,11 @@ def main() -> None:
                 m5.set_display_image(images[i])
                 display = 1
 
-                
+
             if frame is not None:
                 if detections:
                     for detection in detections:
-                        
+
                         # 認識したらカウントを増やす
                         if detection.label == 0:
                             num_a += 1
@@ -93,7 +93,7 @@ def main() -> None:
                             num_e += 1
                         elif detection.label == 4:
                             num_o += 1
-                        
+
                         # カウントが閾値を超え、かつ画像と一致していたら次の画像へ
                         if num_a > a_THRESHOLD and i == 0:
                             display = 0
@@ -111,6 +111,7 @@ def main() -> None:
                             display = 0
                             end = True
                             oakd_yolo.close()
+                            cv2.destroyAllWindows()
                             game_main.main()
                 else:
                     # 指文字の認識カウントをリセット
@@ -119,7 +120,7 @@ def main() -> None:
                     num_u = 0
                     num_e = 0
                     num_o = 0
-            
+
                 oakd_yolo.display_frame("AKARI_PRACTICE", frame, detections)
 
 

@@ -65,7 +65,7 @@ def main() -> None:
 
     # 問題文になる単語群
     words = ["クリスマス","こんにちは","ありがとう","桜","おにぎり","おぼろ月","江戸前","海岸","戦績","伝説の剣聖","洗礼","トウモロコシ","微笑み","誇り",
-             "ふるさと","宇宙船","トヨタ自動車","風景画","不正アクセス","長期的視野","六波羅探題","亜細亜"]
+             "ふるさと","宇宙船","風景画","不正アクセス","長期的視野","六波羅探題","亜細亜"]
     # 母音の数を格納するリスト
     numbers = {'あ':0,'い':0,'う':0,'え':0,'お':0}
 
@@ -120,7 +120,7 @@ def main() -> None:
                         numbers['お'] = count_o
                         maxis = max(numbers,key=numbers.get) # 最も多く含まれる母音
 
-                        
+
                         # 認識したらカウントを増やす
                         if detection.label == 0:
                             num_a += 1
@@ -132,7 +132,7 @@ def main() -> None:
                             num_e += 1
                         elif detection.label == 4:
                             num_o += 1
-                        
+
                         # カウントが閾値を超えたら、ラベルIDに応じてメッセージを設定
                         if num_a > a_THRESHOLD:
                             message = "あ"
@@ -144,7 +144,7 @@ def main() -> None:
                             message = "え"
                         elif num_o > o_THRESHOLD:
                             message = "お"
-                       
+
                         # メッセージが前回と異なる場合のみ表示・読み上げ
                         if message and message != previous_message:
 
@@ -169,10 +169,10 @@ def main() -> None:
                     num_u = 0
                     num_e = 0
                     num_o = 0
-            
+
                 oakd_yolo.display_frame("AKARI_MAIN", frame, detections)
 
-            
+
 
             if cv2.waitKey(1) == ord("q"):
                 end = True
